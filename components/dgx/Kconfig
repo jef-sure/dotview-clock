@@ -1,0 +1,61 @@
+menu "Display Graphics"
+
+    config DGX_ENABLE_SPI
+        bool "Enable the SPI interface displays."
+        help
+            Enables the SPI interface displays.
+
+    config DGX_ENABLE_P8
+        bool "Enable the parallel 8 bit interface displays."
+        help
+            Enables parallel 8 bit (8080) interface displays.
+
+    config DGX_ENABLE_I2C
+        bool "Enable the I2C interface displays."
+        help
+            Enables the I2C interface displays.
+
+    config DGX_ENABLE_SPI_ST7735
+        bool "TFT displays on ST7735 chip."
+        depends on DGX_ENABLE_SPI || DGX_ENABLE_P8
+        help
+            TFT displays on ST7735 chip.
+
+    config DGX_ENABLE_SPI_ST7789
+        bool "TFT displays on ST7789 chip."
+        depends on DGX_ENABLE_SPI || DGX_ENABLE_P8
+        help
+            TFT displays on ST7789 chip.
+
+    config DGX_ENABLE_SPI_SSD_1306
+        bool "OLED displays on SSD 1306 chip."
+        depends on DGX_ENABLE_SPI || DGX_ENABLE_I2C
+        help
+            OLED displays on SSD 1306 chip.
+
+    config DGX_ENABLE_SPI_ILI_9341
+        bool "TFT displays on ILI 9341 chip."
+        depends on DGX_ENABLE_SPI || DGX_ENABLE_P8
+        help
+            TFT displays on ILI 9341 chip.
+
+    config DGX_ENABLE_SSD1351
+        bool "TFT displays on SSD 1351 chip."
+        depends on DGX_ENABLE_SPI || DGX_ENABLE_P8
+        help
+            TFT displays on SSD 1351 chip.
+
+    config DGX_ENABLE_VSCREEN
+        bool "Virtual screen"
+        help
+            Virtual screen
+
+    config DGX_ENABLE_VSCREEN_2H
+        bool "Virtual screen on 2 physical screens"
+        depends on DGX_ENABLE_VSCREEN
+        help
+            Virtual screen on 2 physical screens
+        
+
+        
+endmenu

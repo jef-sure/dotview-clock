@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+    <title>DotView Clock Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        input#clear_wifi:checked[type=checkbox] {
+            background-color: crimson;
+        }
+
+        label.form-label {
+            user-select: none;
+        }
+
+        .form-check-input {
+            border-width: medium;
+        }
+    </style>
+</head>
+
+<body onload="on_load()" class="p-3">
+    <form action="/" method="post">
+        <div class="mb-3">
+            <header class="d-flex justify-content-left py-3">
+                DotView Clock configuration
+            </header>
+            <button type="submit" name="cancel" value="cancel" class="btn btn-warning">Cancel</button>
+        </div>
+        <div class="mb-3">
+            <input type="checkbox" name="is_auto_location" id="is_auto_location" class="form-check-input"
+                %IS_AUTO_LOCATION_CHECKED% onchange="on_is_auto_location(this.checked)">
+            <label for="is_auto_location" class="form-label">
+                Guess location from IP Info
+            </label>
+        </div>
+        <div class="mb-3" id="div_ip_info_key">
+            <label for="ip_info_key" class="form-label">
+                IP Info API key
+            </label>
+            <input type="text" name="ip_info_key" id="ip_info_key" class="form-control" value="%IP_INFO_KEY%">
+        </div>
+        <div class="div_location mb-3">
+            <label for="location" class="form-label">
+                Manual location
+            </label>
+            <input type="text" name="location" id="location" class="form-control" value="%LOCATION%">
+        </div>
+        <div class="div_location mb-3">
+            <label for="timezone" class="form-label">
+                Manual timezone
+            </label>
+            <select name="timezone" id="timezone" class="form-select">
+                %TIMEZONE_OPTIONS%
+            </select>
+        </div>
+        <div id="div_weather" class="mb-3">
+            <label for="openweather_key" class="form-label">
+                Openweathermap.org API key
+            </label>
+            <input type="text" name="openweather_key" id="openweather_key" class="form-control"
+                value="%OPENWEATHER_KEY%">
+            <div id="last_weather_station" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <input type="checkbox" name="clear_wifi" class="form-check-input" id="clear_wifi">
+            <label for="clear_wifi" class="form-label">
+                Clear WiFi data
+            </label>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    <script>
+        var WeatherTimestamp = "%WEATHER_TIMESTAMP%";
+        var WeatherStation = "%WEATHER_STATION%";
+        function date_from_dt(dt) {
+            return (new Date(dt * 1000)).toLocaleString();
+        }
+        function on_is_auto_location(checked) {
+            if (checked) {
+                document.getElementById("div_ip_info_key").style.display = null;
+                document.querySelectorAll(".div_location").forEach(e => e.style.display = 'none');
+            } else {
+                document.getElementById("div_ip_info_key").style.display = 'none';
+                document.querySelectorAll(".div_location").forEach(e => e.style.display = null);
+            }
+        }
+        function on_load() {
+            on_is_auto_location(document.getElementById('is_auto_location').checked);
+            if (parseInt(WeatherTimestamp) && WeatherStation) {
+                document.getElementById("last_weather_station").textContent = 'Last weather station: ' + date_from_dt(parseInt(WeatherTimestamp)) + ' - ' + WeatherStation;
+            }
+        }
+    </script>
+</body>
+
+</html>

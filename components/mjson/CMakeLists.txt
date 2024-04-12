@@ -1,0 +1,16 @@
+set(srcs "src/mjson.c")
+
+idf_component_register(
+	SRCS "${srcs}" 
+	INCLUDE_DIRS "include"
+)
+target_compile_definitions(${COMPONENT_LIB} PRIVATE
+	MJSON_ENABLE_PRINT=0
+	MJSON_MAX_DEPTH=30
+	MJSON_ENABLE_BASE64=0
+	MJSON_ENABLE_RPC=0
+	MJSON_DYNBUF_CHUNK=256
+	MJSON_ENABLE_PRETTY=0
+	MJSON_ENABLE_MERGE=0
+	MJSON_ENABLE_NEXT=0
+)

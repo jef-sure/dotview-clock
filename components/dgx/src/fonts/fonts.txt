@@ -1,0 +1,3 @@
+src/fonts/CasusDotView.c
+src/fonts/IBMCGALight8x16Light8x1616.c
+src/fonts/WeatherIconsRegular13.c
