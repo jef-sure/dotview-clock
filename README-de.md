@@ -77,3 +77,17 @@ Untergeordnete Code-Symbole Unicode, im Programm können nur wenige Code-Symbole
 Die meisten Menschen sind noch nicht einmal organisch. Die Komponente wird in der Post-Rangliste angezeigt, da ich sie nicht gelesen habe.
 Führt den Versand von Displays auf verschiedene Arten von Papier, mit transparenten Blumen und organisierten Paketen durch,
 Virtuelle Ekrane und ihre Kombinationen.
+
+## Ergebnis
+
+### Interne Organisation
+
+Alle Komponenten sind auf einem Steckbrett installiert. Das NodeMCU-P32S-Entwicklungsboard ist im Bett installiert. Oberhalb der Tafel befinden sich zwei Displays. Die Stromversorgung erfolgt über einen externen USB-C-Anschluss. Zusätzlich eingebaute Taste zur Aktivierung des Konfigurationsmodus über das Webinterface und ein Fotowiderstand zur Anpassung der Helligkeit an die Umgebungsbeleuchtung.
+
+### Galerie
+
+![pcb-inside.png](pcb-inside.png)
+![pcb-side.png](pcb-side.png)
+![pcb-displays.png](pcb-displays.png)
+![clock-case.png](clock-case.png)
+![clock-on-the-wall.png](clock-on-the-wall.png)
