@@ -77,3 +77,17 @@ Unicode character encoding is supported, only the necessary character sets can b
 the number of sets is clearly not limited. The component is under constant development according to my needs. 
 Drivers for different displays on different possible buses, with different color depths and memory organization, 
 virtual screens and their combinations are supported.
+
+## Result
+
+### Internal organization
+
+All components are installed on a breadboard. The NodeMCU-P32S development board is installed in the bed. There are two displays above the board. Power is supplied via an external USB-C connector. Additional installed button to enable configuration mode via the web interface and a photoresistor to adjust the brightness to ambient lighting.
+
+### Gallery
+
+![pcb-inside.png](pcb-inside.png)
+![pcb-side.png](pcb-side.png)
+![pcb-displays.png](pcb-displays.png)
+![clock-case.png](clock-case.png)
+![clock-on-the-wall.png](clock-on-the-wall.png)
