@@ -253,9 +253,7 @@ str_t *decode_uri_component_in_place(str_t *uri_str) {
     return uri_str;
 }
 
-/* Our URI handler function to be called during POST /uri request */
 /*
-ip_info_key=&location=Erlebnispark+Teufelstisch&timezone=America%2FArgentina%2FRio_Gallegos&openweather_key=f993363077c58d394a1369f45fab9381&clear_wifi=on
 
 */
 esp_err_t http_post_settings(httpd_req_t *req) {
