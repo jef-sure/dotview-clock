@@ -1,93 +1,74 @@
-# Uhr mit aktueller Anzeige
+# Uhr mit Punktanzeige 
 
-Als ich auf der Matrikeltabelle stand, hatte ich eine Idee, die noch nie gespielt wurde, und dieser Text war animiert.
-Ständig interessant. Animations-Prototypen. In diesem Brief habe ich mich entschieden, dass dieser Artikel nicht bearbeitet werden konnte
-Uhren.
+Eines Tages kam mir beim Betrachten des Matrixdisplays die Idee, dass es nicht schlecht wäre, wenn die Textänderungen animiert wären. Es wurde interessant zu versuchen. Animationsprototyp. Das Aussehen der Schrift hat mir so gut gefallen, dass ich beschlossen habe, eine Uhr darauf basierend zu machen. 
 
-![DotView](dotview-320.gif)
+![Punktansicht] (Punktansicht-320.gif) 
 
-## Hardware
+## Hardware auswählen 
 
-Ich habe den Mikrocontroller ESP32 verwendet, nachdem ich kein WLAN eingerichtet habe, das die Synchronisierung der Uhren innerhalb der Serverzeit ermöglicht
-Wir stellen Ihnen Informationen über den aktuellen Stand und die Prognose zur Verfügung. Der Mikrocontroller ist universell, sehr langlebig und hält nicht lange.
+Ich habe mich für den ESP32-Mikrocontroller entschieden, weil er über WLAN verfügt, mit dem Sie die Uhr mit Zeitservern synchronisieren und Informationen über das aktuelle Wetter und die Vorhersage erhalten können. Der Mikrocontroller ist sehr vielseitig, leistungsstark und nicht teuer. 
 
-![ESP32 lolin0](https://www.az-delivery.de/cdn/shop/products/esp32-lolin-lolin32-wifi-bluetooth-dev-kit-mikrocontroller-684175.jpg?v=1679400714&width=400)
+![ESP 32] lolin0](https://www.az-delivery.de/cdn/shop/products/esp32-lolin-lolin32-wifi-bluetooth-dev-kit-mikrocontroller-684175.jpg?v=1679400714&width=400) 
 
-Es wurden nur wenige Anzeigen angezeigt. In diesem Fall kam ich zu Ihnen, weil die Uhr noch in der Nacht bleiben musste, um sie zu retten
-Es muss nur ein Minimum sein, eine schöne Zeit. In einigen meiner Hobby-Displays, die vor meinen Mitmenschen passierten, gab es ein ständiges Problem
-Leuchten, schwarz OLED. Es werden nur wenige Kriterien berücksichtigt, wenn die geplante Uhr noch vor Kurzem angezeigt wird
-vor zwei Wochen, nicht mehr. Aufgrund des Problems mit der OLED-Anzeige ist dies bereits der Fall
-Kosten, Kosten und Kosten. Die Anzeige der Geschwindigkeitsreduzierung ist nicht unbedingt erforderlich, es werden keine Probleme auf dem virtuellen Bildschirm angezeigt
-Ich möchte mehr als nur ein Foto machen.
-Wir haben dies getan, weil die Informationen auf dem Bildschirm nur wenige Minuten entfernt sein können – mit nur wenigen Uhren, innerhalb weniger Minuten.
-Daher besteht das Display aus zwei OLED-Displays mit einer Größe von 1,5 Zoll und einer Auflösung von 128 x 128 Pixeln.
+Ich habe verschiedene Displays ausprobiert. Infolgedessen bin ich zu dem Schluss gekommen, dass, wenn Sie nachts auf die Uhr schauen möchten, die Beleuchtung minimal oder besser noch keine sein sollte. Alle Hobby-Displays, die ich durch meine Hände gegangen bin, hatten ein schwerwiegendes Problem mit der Hintergrundbeleuchtung, außer OLED. Die Belichtung wird zu einem wichtigen Kriterium, wenn die Uhr nachts gesehen werden soll, wenn außer der Uhr kein anderes Licht vorhanden ist. Leider besteht das Problem bei OLED-Displays darin, dass es schwierig ist, das richtige in Größe, Auflösung und Preis zu finden. Die Bildschirmauflösung sollte nicht sehr groß sein; Sie möchten nicht viel Speicherplatz auf einem virtuellen Bildschirm aufwenden. Im Gegenteil, Sie möchten größere Größen, damit Sie das Bild von weitem sehen können. Ich habe die Tatsache ausgenutzt, dass die Informationen auf dem Bildschirm auf der einen Seite in halbe Stunden und auf der anderen Seite in Minuten unterteilt werden können. Somit besteht der Uhrenbildschirm aus zwei 1,5 "OLED-Displays mit einer Auflösung von jeweils 128 x 128. 
 
-![OLED SSD1351](https://m.media-amazon.com/images/I/61tp4yL59+L._AC_SX679_.jpg)
+![OLED-SSD1351](https://m.media-amazon.com/images/I/61tp4yL59+L._AC_SX679_.jpg ) 
 
-Darüber hinaus haben wir ein Fotoarchiv für die automatische Überwachung von Bildern erstellt
-яркость изображения под освещённость.
+Zusätzlich habe ich mich für einen Fotowiderstand entschieden, um das Umgebungslicht zu messen, um die Helligkeit des Bildes automatisch an die Beleuchtung anzupassen. 
 
-Die Montage erfolgt auf der Herstellungsplatte.
+Alles ist auf einem Steckbrett montiert. 
 
-Der Korpus wurde zunächst mit einem Schlüssel versehen, während die Uhr eingeschaltet war. Bei Amazon kostenlos für 10 Euro kaufen.
+Das erste Gehäuse, auf das ich gestoßen bin, hatte eine transparente Abdeckung, in die die Uhr eingelegt ist. Gekauft bei Amazon für etwa 10 Euro. 
 
-![Anschlussdose](https://m.media-amazon.com/images/I/51WUj53rYDL._AC_UF894,1000_QL80_.jpg)
+![Anschlussdose] (https ://m.media-amazon.com/images/I/51WUj53rYDL._AC_UF894 ,1000_QL80_.jpg ) 
 
-## Funktion
+## Betrieb 
 
-### Einstellungen
+### Einstellung 
 
-Bevor Sie ein Programm hinzufügen, werden keine Daten für die Verbindung mit den Websites benötigt und Sie wählen einen QR-Code für die Programme aus
-„ESP SoftAP Provisioning“ ist sowohl im Google Play Market als auch im App Store erhältlich. Weitere Informationen zum WLAN
-Das Programm muss sich mit der Zeit in der Stadt befassen, die in der Zonen- und Schulzeit liegt,
-Sie sollten die Zeit und den Tag normalerweise einhalten. Es gibt noch keine weiteren Informationen, die ich auf unserer Webseite gefunden habe.
-Um die Website-Interferenz zu schließen, klicken Sie auf die Schaltfläche, um den QR-Code mit der Website-Adresse auf dem Bildschirm anzuzeigen.
-Normalerweise handelt es sich hierbei um eine Adresse in einer eindeutigen, symbolischen Form. Bereiten Sie sich auf eine Adresse vor und laden Sie sie mit der API auf die Website herunter
-Unter [openweathermap.org](https://openweathermap.org/api) haben die Benutzer die Möglichkeit, die Wetterlage zu ändern und innerhalb des jeweiligen Zeitraums oder in der gesamten Zeitspanne auszuwählen
-Über die API [ipinfo.io] (https://ipinfo.io) kann dieses Programm die automatische Überwachung der Datenverarbeitung ermöglichen.
+Wenn Sie das Programm zum ersten Mal einschalten, erkennt es, dass keine Daten für die Verbindung mit dem Netzwerk vorhanden sind, und zeigt einen QR-Code für das Programm `ESP SoftAP Provisioning` an, das sowohl im Google Play Market als auch im App Store verfügbar ist. Nach dem Einrichten von WLAN möchte das Programm Daten über seinen Standort empfangen, um die Zeitzone und den Standort herauszufinden, um Uhrzeit und Wetter korrekt anzuzeigen. Da zunächst keine Daten vorhanden sind, müssen diese über die Weboberfläche eingegeben werden. Um die Weboberfläche einzuschalten, müssen Sie die Taste auf der Rückseite der Uhr drücken; auf dem linken Bildschirm wird ein QR-Code mit der Website-Adresse und auf dem rechten Bildschirm dieselbe Adresse in normaler symbolischer Form angezeigt. Indem Sie zur Adresse gehen und die Daten mit dem API-Schlüssel von der Wetterseite eingeben [openweathermap.org ](https://openweathermap.org/api ), sowie entweder die manuelle Eingabe des Standorts und die Auswahl der Zeitzone oder die Eingabe des API-Schlüssels [ipinfo.io ] (https://ipinfo.io ), dann wird das Programm seinen Standort automatisch bestimmen. 
 
-Kurz nach dem Aufruf dieser Website wird das Internet aktiviert und die Uhr wird in die richtige Reihenfolge gebracht.
+Unmittelbar nach dem Senden der Daten schaltet sich das Webinterface aus und die Uhr kehrt in den Normalmodus zurück. 
 
-### Normales Werk
+### Normalbetrieb 
 
-Verwalter von Verkehrsüberwachungs- und Vertriebskanälen, die regelmäßig in den nächsten Monaten überprüft werden,
-Informationen zu diesem Zeitpunkt werden innerhalb einer bestimmten Frist für die Verkehrskontrolle benötigt. Von diesem Zeitpunkt an wird die Verschlüsselungsfrist angezeigt.
-Die Blumen sind noch nicht ganz so lang, aber sie sind schon seit zwei Jahren mit anderen Kindern verbunden. Цвет символов погоды и цифр температуры
-hängt von der Temperatur ab. Gut, dass die Blumen auf der Website erscheinen; когда умеренно тепло, то зелёный; жаркая погода
-показывается красным. Formeln für die Temperaturregelung in Blumen sind am nächsten Tag am besten geeignet
-готового net. In der letzten Woche wird ein Symbol für Textnachrichten angezeigt, das in der nächsten Folge angezeigt wird
-Zum Beispiel drei Stunden. Natürlich müssen Sie darauf achten, dass Sie sich vor der Arbeit im Haus aufhalten.
+Nachdem die Uhr ihren Standort bestimmt und die Zeitzone entsprechend angepasst hat, fragt sie regelmäßig eine Wetterseite ab, von der sie Sonnenauf- und -Untergangszeiten für den Standort erhält. Daraus wird die Farbe der Zeitziffern berechnet. Nachts sollte die Farbe kupferfarben sein, tagsüber weiß, der Übergang von einem zum anderen ist glatt. Die Farbe von Wettersymbolen und Temperaturzahlen wird aus der Temperatur berechnet. Wenn es kalt ist, wird die Farbe blau; Wenn es mäßig warm ist, ist es grün; heißes Wetter wird rot angezeigt. Formeln zur Umwandlung von Temperatur in Farbe wurden unabhängig voneinander erfunden, aus irgendeinem Grund gibt es nirgendwo etwas Vorgefertigtes. Auf dem linken Bildschirm wird im Hintergrund das Symbol für das aktuelle Wetter angezeigt, rechts die Vorhersage für die nächsten drei Stunden. Praktisch am Morgen, um zu wissen, worauf Sie sich verlassen müssen, bevor Sie zur Arbeit gehen. 
 
-## Programm
+## Programm 
 
-### Plattform
+### Plattform 
 
-Das Programm wurde mit der firmeneigenen Software ESP-IDF von Espresiff auf Si-Basis erstellt.
+Das Programm ist mit dem proprietären ESP-IDF-Framework von Espresiff in reinem C geschrieben. 
 
-Daher wurde die Bibliothek [mjson] (https://github.com/cesanta/mjson) verwendet, um Antworten auf API-Dienste zu erhalten.
-Der Zugriff auf die ESP32-Bibliothek erfolgte nach der Veröffentlichung mit ESP-IDF nicht
-Die cJSON-Komponente für die Erstellung eines 16-Kilobyte-Projekts kann mehr als 16 Kilobyte kosten, was bereits in der Küche passiert ist.
+Das [mjson](https://github.com/cesanta/mjson ) Bibliothek wurde auch verwendet, um akzeptierte Antworten von API-Diensten zu analysieren. Ich musste eine Bibliothek eines Drittanbieters verwenden, die nicht einmal auf den ESP32 portiert war, da die mit ESP-IDF gelieferte cJSON-Komponente beim Parsen einer 16-Kilobyte-Wettervorhersageantwort mehr Speicher benötigen konnte, als im Heap frei war. 
 
-Für die Arbeit mit der Anzeige wurden meine entsprechenden Komponenten erstellt. Nach der Einschreibung wurde eine allgemeine, wirksame,
-лёгкость und расширяемость. Bei der Erstellung eines virtuellen Bildschirms werden Bilder angezeigt, die auf zwei fiskalischen Bildschirmen angezeigt werden
-Im Moment wurde nur noch wenige Schritte entfernt. Ich weiß nicht, welche Informationen ich erhalten habe
-Virtueller Bildschirm, kostet in der Regel 58,5 Karten/Sek. Die Komponenten werden durch die in der Öffentlichkeit vorherrschenden Schriften ergänzt
-Formate, Typ BITSTREAM, wie in den Bibliotheken von Adafruit, und auch diese Symbole, geladene Koordinaten in der Matrix.
-Untergeordnete Code-Symbole Unicode, im Programm können nur wenige Code-Symbole heruntergeladen werden,
-Die meisten Menschen sind noch nicht einmal organisch. Die Komponente wird in der Post-Rangliste angezeigt, da ich sie nicht gelesen habe.
-Führt den Versand von Displays auf verschiedene Arten von Papier, mit transparenten Blumen und organisierten Paketen durch,
-Virtuelle Ekrane und ihre Kombinationen.
+Um mit Displays zu arbeiten, habe ich meine eigene Komponente geschrieben. Beim Schreiben lag der Schwerpunkt auf Vielseitigkeit, Effizienz, Leichtigkeit und Erweiterbarkeit. Das Hinzufügen eines virtuellen Bildschirms, dessen Bild gleichzeitig auf zwei physischen Bildschirmen angezeigt wird, dauerte mehrere Dutzend Zeilen. Die Bildrate beträgt unter Berücksichtigung, dass die Informationen zuerst auf dem virtuellen Bildschirm gezeichnet werden müssen, ungefähr 58,5 Bilder / Sekunde. Die Komponente unterstützt auch Schriftarten, die in verschiedenen Formaten dargestellt werden, z. B. BITSTREAM, wie in Bibliotheken von Adafruit, sowie Zeichen, die durch die Koordinaten von Punkten in der Matrix spezifiziert werden. Unicode-Zeichenkodierung wird unterstützt, es können nur die erforderlichen Zeichensätze in das Programm geladen werden, die Anzahl der Sätze ist eindeutig nicht begrenzt. Die Komponente wird ständig nach meinen Bedürfnissen weiterentwickelt. 
+Treiber für verschiedene Displays auf verschiedenen möglichen Bussen, mit unterschiedlichen Farbtiefen und Speicherorganisation, virtuelle Bildschirme und deren Kombinationen werden unterstützt.
+
+## Schriftart
+
+### Hintergrund
+
+Wir können sagen, dass die Schriftarten in diesem Projekt das Hauptmerkmal sind. Ich habe schon Projekte gemacht, bei denen Schriftarten mit kubischen Bezier-Kurven beschrieben wurden. Beschreibung mit Kurven ermöglicht es Ihnen, Symbole mit einer kleinen Anzahl von Ankerpunkten zu beschreiben, aber gleichzeitig einfach auf jede Größe zu skalieren. Ein Beispiel für ein solches Projekt ist [Wetteruhr](https://github.com/jef-sure/ili9341_dgx ). Demo-Video dieses Projekts: [Bezier Curves Clock](https://youtu.be/7H-2-X1M7PA?si=46Ek5eJoc2KWcRSB ).
+
+### Gepunktete Schrift
+
+Wie der Name schon sagt, besteht die gepunktete Schrift aus Punkten. Die Punkte stellen Matrizen dar, deren Größe vom gewählten Maßstab abhängt. Matrizen der Größen von 1 bis 5 werden von Hand ausgewählt, der Rest entsteht durch automatisch gezeichnete Kreise mit abnehmender Helligkeit von der Mitte zum Rand. Die Matrizen sind monochrom. Bei der Ausgabe können Sie eine Farbkarte angeben. Dank dieses Ansatzes wird die Schrift in jedem Maßstab gut aussehen.
+
+### Morph
+
+Um den Übergang von einem Charakter zum anderen zu animieren, werden mehrere Schritte ausgeführt. Es werden zwei Koordinatenarrays von Punkten jedes Symbols erstellt: von denen aus die Transformation erfolgt und in die die Transformation erfolgt. Dann wird die Anzahl der Elemente in diesen Arrays ausgeglichen, indem die fehlenden Elemente durch Multiplizieren des letzten Elements in dem entsprechenden Array vervollständigt werden. Die Funktion, die die Transformation durchführt, berechnet die Verschiebung jedes Punktes entlang der Linie von alten zu neuen Koordinaten in Abhängigkeit vom Parameter `t ∈ [0, 1]`, wobei `t = 0` die Koordinaten des ursprünglichen Symbols und `t = 1` - die Koordinaten des endgültigen Symbols bedeutet. Der Parameter 't' wird zeitlich so berechnet, dass das gesamte Intervall von 0 bis 1 in einer halben Sekunde vergeht. Der Startpunkt wird eine halbe Sekunde vor der nächsten Sekunde ausgewählt.
 
 ## Ergebnis
 
 ### Interne Organisation
 
-Alle Komponenten sind auf einem Steckbrett installiert. Das NodeMCU-P32S-Entwicklungsboard ist im Bett installiert. Oberhalb der Tafel befinden sich zwei Displays. Die Stromversorgung erfolgt über einen externen USB-C-Anschluss. Zusätzlich eingebaute Taste zur Aktivierung des Konfigurationsmodus über das Webinterface und ein Fotowiderstand zur Anpassung der Helligkeit an die Umgebungsbeleuchtung.
+Alle Komponenten sind auf einem Steckbrett installiert. Das Entwicklungsboard NodeMCU-P32S ist im Bett installiert. Über der Platine befinden sich zwei Displays. Die Stromversorgung erfolgt über einen externen USB-C-Anschluss. Zusätzlich installierter Taster zum Aktivieren des Konfigurationsmodus über die Weboberfläche und ein Fotowiderstand zum Anpassen der Helligkeit an die Umgebungsbeleuchtung.
 
 ### Galerie
 
-![pcb-inside.png](pcb-inside.png)
-![pcb-side.png](pcb-side.png)
-![pcb-displays.png](pcb-displays.png)
-![clock-case.png](clock-case.png)
-![clock-on-the-wall.png](clock-on-the-wall.png)
+![pcb-innen.png](Leiterplatte-innen.png)
+![pcb-Seite.png](Leiterplattenseite.png)
+![pcb-Anzeigen.png](Leiterplatten-Anzeigen.png)
+![uhrengehäuse.png](Uhrgehäuse.png)
+![uhr an der Wand.png](Uhr an der Wand.png)
