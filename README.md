@@ -59,6 +59,10 @@ As the name suggests, dotted font is made up of dots. The points represent matri
 
 To animate the transition from one character to another, several steps are performed. Two arrays of coordinates of points of each symbol are created: from which the transformation occurs and into which the transformation occurs. Then, the number of elements in these arrays is equalized by completing the missing elements by multiplying the last element in the corresponding array. The function that performs the transformation calculates the shift of each point along the line from old coordinates to new ones depending on the parameter `t ∈ [0, 1]`, where `t = 0` means the coordinates of the original symbol, and `t = 1` - the coordinates of the final symbol. The `t` parameter is calculated in time so that the entire interval from 0 to 1 passes in half a second. The starting point is selected half a second before the next second.
 
+### Dot font development
+
+I made the first 10 characters representing the numbers, plus a couple of additional ones to show the degrees, on my own. As a basis for the symbols of the weather image, I took a font containing icons of weather symbols and modified them with my hands in the [FontCreator] editor (https://github.com/Llerr/FontCreator ). In order for the animation of symbols not to look like a random movement of points from one coordinate to another, they must be arranged in a certain order so that the unchangeable parts remain in the same places during the transition, and the changeable ones preferably change so that they intersect less with other points when moving. `FontCreator` allows you to specify the index of each point when editing a symbol.
+
 ## Result
 
 ### Internal organization

@@ -59,6 +59,10 @@ Wie der Name schon sagt, besteht die gepunktete Schrift aus Punkten. Die Punkte 
 
 Um den Übergang von einem Charakter zum anderen zu animieren, werden mehrere Schritte ausgeführt. Es werden zwei Koordinatenarrays von Punkten jedes Symbols erstellt: von denen aus die Transformation erfolgt und in die die Transformation erfolgt. Dann wird die Anzahl der Elemente in diesen Arrays ausgeglichen, indem die fehlenden Elemente durch Multiplizieren des letzten Elements in dem entsprechenden Array vervollständigt werden. Die Funktion, die die Transformation durchführt, berechnet die Verschiebung jedes Punktes entlang der Linie von alten zu neuen Koordinaten in Abhängigkeit vom Parameter `t ∈ [0, 1]`, wobei `t = 0` die Koordinaten des ursprünglichen Symbols und `t = 1` - die Koordinaten des endgültigen Symbols bedeutet. Der Parameter 't' wird zeitlich so berechnet, dass das gesamte Intervall von 0 bis 1 in einer halben Sekunde vergeht. Der Startpunkt wird eine halbe Sekunde vor der nächsten Sekunde ausgewählt.
 
+### Entwickeln einer Punktschriftart
+
+Die ersten 10 Zeichen, die Zahlen darstellen, plus ein paar zusätzliche, um Grad anzuzeigen, habe ich selbst gemacht. Als Grundlage für die Symbole des Wetterbildes habe ich eine Schriftart mit den Symbolen der Wettersymbole genommen und sie mit den Händen im [FontCreator] -Editor bearbeitet (https://github.com/Llerr/FontCreator ). Damit die Symbolanimation nicht wie eine zufällige Bewegung von Punkten von einer Koordinate zu einer anderen aussieht, müssen Sie sie in einer bestimmten Reihenfolge anordnen, damit die unveränderlichen Teile beim Übergang an den gleichen Stellen bleiben, und die veränderlichen Teile sollten sich ändern, vorzugsweise so, dass sie sich bei der Bewegung weniger mit anderen Punkten schneiden. Mit dem 'FontCreator' können Sie beim Bearbeiten eines Symbols den Index für jeden Punkt angeben.
+
 ## Ergebnis
 
 ### Interne Organisation
